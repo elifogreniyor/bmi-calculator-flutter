@@ -5,11 +5,12 @@ void main() => runApp(BMICalculator());
 class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = ThemeData();
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.red,
+      theme: theme.copyWith(
+        colorScheme: theme.colorScheme.copyWith(primary: Color(0xFF0F1020), secondary: Colors.red) //accent color
       ),
-      home: InputPage(),
+     home: InputPage(), 
     );
   }
 }
